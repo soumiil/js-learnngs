@@ -17,8 +17,20 @@
 // }
 // chai();
 
-const chai = () => {
-    let username = "hitesh"
-    console.log(this);
-}
-chai();
+// const chai = () => {
+//     let username = "hitesh"
+//     console.log(username);
+// }
+// chai();
+
+
+
+// Explicit return function
+// const addTwo = (num1, num2) => {
+//   return num1 + num2
+// }
+
+// Implicit return function
+const addTwo = (num1, num2) => (num1 + num2)
+
+console.log(addTwo(3, 4));
