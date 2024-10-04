@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="" alt="Avatar" style="width: 100%; border-radius: 1rem;">
+            <h4></h4>
+            <p class="bio"></p>
+            <p class="repos"></p>
+        </div>
+        <button style="padding: 0.3rem;">Get image</button>
+    </div>
+</body>
+
+<script>
+    document.querySelector('button').addEventListener('click', function () {
+        const xhr = new XMLHttpRequest();
+        const requestURL = 'https://api.github.com/users/soumiil';
+        xhr.open('GET', requestURL);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText);
+                document.querySelector('img').setAttribute("src", `${data.avatar_url}`)
+                document.querySelector('h4').innerHTML = `Followers: ${data.followers}`
+                document.querySelector('h4').style.color = "#212121"
+                document.querySelector('.bio').innerHTML = `About: ${data.bio}`
+                document.querySelector('.bio').style.color = "#212121"
+                document.querySelector('.repos').innerHTML = `Repos: ${data.public_repos}`
+                document.querySelector('.repos').style.color = "#212121"
+            }
+        }
+        xhr.send();
+    })
+
+</script>
+
+</html>
