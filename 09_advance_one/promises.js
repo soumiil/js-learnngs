@@ -92,27 +92,27 @@ consumePromiseFive();
 
 
 
-// async function getAllUsers() {
-//     try {
-//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
-//         // console.log(response); // without using 'await' data has not been retreived yet
-//         const data = await response.json()
-//         console.log(data);
-//     }
-//     catch(error) {
-//         console.log("Error: ", error);
-//     }
-// }
-// getAllUsers() // async function returns promise
+async function getAllUsers() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+        // console.log(response); // without using 'await' data has not been retreived yet
+        const data = await response.json()
+        console.log(data);
+    }
+    catch(error) {
+        console.log("Error: ", error);
+    }
+}
+getAllUsers() // async function returns promise
 
 
-fetch('https://jsonplaceholder.typicode.com/users') // fetch also returns a promise
-.then((response) => {
-    return response.json();
-})
-.then((data) => {
-    console.log(data);
-})
-.catch((error) => {
-    console.log(error);
-})
+// fetch('https://jsonplaceholder.typicode.com/users') // fetch also returns a promise
+// .then((response) => {
+//     return response.json();
+// })
+// .then((data) => {
+//     console.log(data);
+// })
+// .catch((error) => {
+//     console.log(error);
+// })
