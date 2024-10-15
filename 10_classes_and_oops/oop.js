@@ -12,13 +12,16 @@
 // console.log(user.username);
 // console.log(user.getUserDetails());
 
-function User(username, loginCount, isLoggedIn) {
+const User = function(username, loginCount, isLoggedIn) {
   this.username = username;
   this.loginCount = loginCount;
   this.isLoggedIn = isLoggedIn;
+
+  this.greetings = () => {
+    console.log(`Hello ${this.username}`);
+  }
 }
 
-const userOne = new User("Hitesh", 45, true);
-const userTwo = new User("Chai-aur-Code", 11, false);
+const userOne = new User("Soumil", 45, true);
+
 console.log(userOne);
-console.log(userTwo);
