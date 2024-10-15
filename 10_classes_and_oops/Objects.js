@@ -1,24 +1,24 @@
-function multipleBy5(num) {
-    return num * 5;
+// const user = {
+//   username: "Soumil",
+//   loginCount: 8,
+//   signedIn: true,
+//   getUserDetails: function () {
+//     // console.log("Got user details from database");
+//     console.log(`Username: ${this.username}`);
+//     console.log(this);
+//   },
+// };
+
+// console.log(user.username);
+// console.log(user.getUserDetails());
+
+function User(username, loginCount, isLoggedIn) {
+  this.username = username;
+  this.loginCount = loginCount;
+  this.isLoggedIn = isLoggedIn;
 }
 
-multipleBy5.power = 2;
-
-console.log(multipleBy5(5));
-console.log(multipleBy5.power);
-console.log(multipleBy5.prototype);
-
-function createUser(username, score) {
-    this.username = username
-    this.score = score
-}
-
-createUser.prototype.increment = function() {
-    this.score++;
-}
-
-const chai = new createUser("chai", 25)
-const tea = new createUser("tea", 250)
-
-tea.increment();
-console.log(tea.score);
+const userOne = new User("Hitesh", 45, true);
+const userTwo = new User("Chai-aur-Code", 11, false);
+console.log(userOne);
+console.log(userTwo);
