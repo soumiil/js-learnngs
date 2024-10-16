@@ -17,7 +17,9 @@ Object.prototype.soumil = function () {
 };
 
 Array.prototype.heySoumil = function () {
-    console.log(`Soumil says, Hello!`);
+    console.log(
+        "Soumil says, Hello! And this is now available in all arrays now"
+    );
 };
 
 // heroPower.soumil();
