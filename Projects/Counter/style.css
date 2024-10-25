@@ -5,8 +5,13 @@
     font-family: "Monaspace Neon";
 }
 
-.container {
+body {
     height: 100vh;
+    width: 100%;
+}
+
+.container {
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -52,4 +57,18 @@
 #increase {
     background-color: green;
     color: #fff;
+}
+
+@media screen and (max-width: 640px) {
+    .btn-container {
+        height: 15rem;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .btn-container button {
+        height: 4rem;
+        width: 10rem;
+    }
 }

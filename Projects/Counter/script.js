@@ -8,7 +8,7 @@ let count = 0;
 increase.addEventListener("click", () => {
     counter.innerHTML = `${++count}`;
     if (count > 0) {
-        counter.style.color = `green`;
+        counter.style.color = `#57cc99`;
     }
     else if (count === 0) {
         counter.style.color = `yellow`;
